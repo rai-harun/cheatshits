@@ -1,39 +1,12 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/prism.css'%}">
 <div class="tab-content" id="v-pills-tabContent">
-  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-              <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
-                <pre class="language-js"><code>var i = 45; </code></pre>
-            </li> 
-
-            <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
-              <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
-                &lt;html lang="en"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Document&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    
-                &lt;/body&gt;
-                &lt;/html&gt; </code></pre>
-          </li> 
-  </div>
+  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
   {% for prog_title in titles %}
   <div class="tab-pane fade" id="v-pills-{{prog_title.title}}" role="tabpanel" aria-labelledby="v-pills-{{prog_title.title}}-tab">
-    <div class="tab-pane fade show active" id="v-pills-{{prog_title.title}}" role="tabpanel" aria-labelledby="v-pills-{{prog_title.title}}-tab">
-    {% for cheatshit in prog_title.cheatshits__set.all %}
-      <li><b>{{cheatshit.heading}}</b> This is the basic html boilerplate code
-        <pre class="language-{{prog_title.title}}"><code>{{cheatshit.codes}}</code></pre>
-    </li> 
-    {% endfor %}
+    {{prog_title.title}}
   </div>
   {% endfor %}
-
-  <!--
-  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">3</div>
-  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">4</div>
-  -->
+  
 </div>
 <script src="{% static 'js/prism.js'%}"></script>

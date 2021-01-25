@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.ShitHome, name="shithome"),
-    path('', views.CheatShitForView, name="cheatshitforview"),
+    # path('category/<int:pk>/', views.ShitHomeUrl, name="shithomeurl"),
 ]
