@@ -1,0 +1,19 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Shitfiles | Home</title>
+{% endblock %}
+{% block content %}
+{% include '_navbar.html' %}
+{% include '_messages.html' %}
+
+<div class="row m-3">
+    <div class="col-md-3">
+        {% include 'shitfiles/sidebar.html' %}
+    </div>
+    <div class="col-md-9">
+        {% include 'shitfiles/sidebar-2.html' %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+body {
+    background-color: wheat;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.border {
+    margin-top: 37%;
+}
+
+h1{
+    font-family: 'Potta One', cursive;
+    font-size: 34px !important;
+}
+
+@media (max-width: 767.98px) {
+    .border {
+        margin-top: 28%;
+    }
+}
