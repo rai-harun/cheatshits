@@ -1,12 +1,26 @@
 {% load static %}
+{% load static %}
 <link rel="stylesheet" href="{% static 'css/prism.css'%}">
 <div class="tab-content" id="v-pills-tabContent">
-  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+  <h3>Welcome to Cheat Shit</h3>
+  <p>Please consider the following things:</p>
+  <ol>
+    <li>This is for only education purposes</li>
+    <li>You can use it for yourself at your own risk</li>
+    <li>Do not save the private and sensitive data</li>
+    <li>You can ask for the code at harun@gmail.com</li>
+    <li>Feebacks are always Welcome</li>
+  </ol>
+  </div>
   {% for prog_title in titles %}
-  <div class="tab-pane fade" id="v-pills-{{prog_title.title}}" role="tabpanel" aria-labelledby="v-pills-{{prog_title.title}}-tab">
-    {{prog_title.title}}
+  <div class="tab-pane fade" id="v-pills-{{prog_title.title}}" role="tabpanel"
+    aria-labelledby="v-pills-{{prog_title.title}}-tab">
+    {% for shitdetail in shitdetails %}
+    <p style="width: auto;">{{shitdetail.codes}}</p>
+    {% endfor %}
   </div>
   {% endfor %}
-  
+
 </div>
 <script src="{% static 'js/prism.js'%}"></script>

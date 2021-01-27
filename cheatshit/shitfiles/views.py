@@ -13,9 +13,13 @@ def ShitHome(request):
     }
     return render(request, 'shitfiles/index.html', context)
 
-def ShitDetails(request, pk):
-    for 
+def ShitDetails(request, pk=None):
+    titles = CheatShitFor.objects.filter(user=request.user)
+    prog_title = CheatShitFor.objects.get(id=pk)
+    shitdetails = CheatShits.objects.filter(cheatshitfor_id=pk)
     context = {
-
+        'shitdetails': shitdetails,
+        'titles': titles,
+        'prog_title': prog_title,
     }
-    return render(request, 'shitfiles/index.html', context)
+    return render(request, 'shitfiles/test.html', context)

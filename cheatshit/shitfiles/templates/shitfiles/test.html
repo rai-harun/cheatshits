@@ -8,6 +8,16 @@
   .nav-pills .show>.nav-link {
     background-color: #ffaaaa;
   }
+
+  .vertical-scrollable {
+    position: absolute;
+    overflow-x: scroll;
+  }
+
+  .horizontal-scrollable {
+    position: absolute;
+    overflow-y: scroll;
+  }
 </style>
 {% endblock %}
 {% block content %}
@@ -20,7 +30,17 @@
       {% include 'shitfiles/sidebar.html' %}
     </div>
     <div class="col-md-10">
-      {% include 'shitfiles/sidebar-2.html' %}
+      <div>
+        {% for shitdetail in shitdetails %}
+        <ol>
+          <li><b>{{shitdetail.heading}}:</b>
+            <pre class="language-{{prog_title.title}}"><code>
+          {{shitdetail.codes}}
+        </code></pre>
+          </li>
+        </ol>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
